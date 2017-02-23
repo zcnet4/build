@@ -2011,6 +2011,8 @@ def GenerateOutput(target_list, target_dicts, data, params):
     global srcdir_prefix
     makefile_path = os.path.join(
         options.toplevel_dir, options.generator_output, makefile_name)
+    ## add by zc. 2017-1-17 11:06
+    srcdir = options.depth
     srcdir = gyp.common.RelativePath(srcdir, options.generator_output)
     srcdir_prefix = '$(srcdir)/'
 
